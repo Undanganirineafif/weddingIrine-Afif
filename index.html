@@ -2,16 +2,8 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="theme-color"
-    content="#241017"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b111b">
 
   <title>Irine & Afif — Wedding Invitation</title>
 
@@ -27,20 +19,21 @@
   <style>
 
     /* =====================================================
-       ROOT
+       COLOR
     ===================================================== */
 
-    :root{
-      --wine:#2b111b;
-      --wine-dark:#210e15;
-      --wine-light:#451c2a;
+    :root {
+      --wine: #2b111b;
+      --wine-dark: #210e15;
+      --wine-light: #451c2a;
 
-      --cream:#f7f2ed;
-      --soft:#e9dfda;
-      --gold:#c7a98b;
+      --cream: #f7f2ed;
+      --soft: #e9dfda;
 
-      --white:#ffffff;
-      --dark:#201016;
+      --gold: #c7a98b;
+
+      --dark: #201016;
+      --white: #ffffff;
     }
 
 
@@ -48,188 +41,112 @@
        RESET
     ===================================================== */
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      background:#151015;
-      color:var(--cream);
-      font-family:"DM Sans",sans-serif;
-      overflow-x:hidden;
+    body {
+      background: #151015;
+      color: var(--cream);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
     }
 
-    button{
-      font:inherit;
+    button,
+    input,
+    select {
+      font: inherit;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-
-    /* =====================================================
-       MAIN PAGE
-    ===================================================== */
-
-    .page{
-      width:min(100%,520px);
-      margin:auto;
-      background:var(--wine);
-      min-height:100vh;
-      position:relative;
-      overflow:hidden;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
 
     /* =====================================================
-       SUBTLE BACKGROUND FLORAL
+       MAIN CONTAINER
     ===================================================== */
 
-    .page::before,
-    .page::after{
-      content:"";
-      position:absolute;
-
-      width:260px;
-      height:260px;
-
-      border-radius:50%;
-
-      opacity:.10;
-
-      pointer-events:none;
-
-      background:
-        radial-gradient(
-          ellipse at 25% 30%,
-          #d9c5b8 0 10%,
-          transparent 11%
-        ),
-
-        radial-gradient(
-          ellipse at 55% 25%,
-          #d9c5b8 0 11%,
-          transparent 12%
-        ),
-
-        radial-gradient(
-          ellipse at 75% 50%,
-          #d9c5b8 0 12%,
-          transparent 13%
-        ),
-
-        radial-gradient(
-          ellipse at 40% 70%,
-          #d9c5b8 0 12%,
-          transparent 13%
-        ),
-
-        radial-gradient(
-          ellipse at 70% 78%,
-          #d9c5b8 0 10%,
-          transparent 11%
-        );
-
-      filter:blur(1px);
-    }
-
-    .page::before{
-      left:-120px;
-      top:520px;
-      transform:rotate(-20deg);
-    }
-
-    .page::after{
-      right:-130px;
-      top:900px;
-      transform:rotate(25deg);
+    .page {
+      width: min(100%, 520px);
+      margin: auto;
+      background: var(--wine);
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
 
     /* =====================================================
-       INTRO / ENVELOPE
+       INTRO
     ===================================================== */
 
-    .intro{
-      position:fixed;
-      inset:0;
+    .intro {
+      position: fixed;
+      inset: 0;
 
-      z-index:100;
+      z-index: 100;
 
       background:
         radial-gradient(
           circle at 50% 35%,
-          rgba(105,48,66,.25),
+          rgba(105,48,66,.28),
           transparent 40%
         ),
-
         var(--wine);
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       transition:
         opacity .9s ease,
         visibility .9s ease;
     }
 
-    .intro.hidden{
-      opacity:0;
-      visibility:hidden;
-      pointer-events:none;
+    .intro.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
 
-    .intro-inner{
-      width:min(90%,430px);
-
-      text-align:center;
-
-      padding:30px 20px;
+    .intro-inner {
+      width: min(90%, 430px);
+      text-align: center;
+      padding: 30px 20px;
     }
 
-    .eyebrow{
-      font-family:"Cormorant Garamond",serif;
-
-      font-size:18px;
-
-      letter-spacing:2px;
-
-      margin-bottom:12px;
-
-      opacity:.9;
+    .eyebrow {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      opacity: .9;
     }
 
-    .script{
-      font-family:"Great Vibes",cursive;
-
-      font-weight:400;
+    .script {
+      font-family: "Great Vibes", cursive;
+      font-weight: 400;
     }
 
-    .intro-names{
-      font-size:58px;
-
-      line-height:.95;
-
-      margin-bottom:34px;
+    .intro-names {
+      font-size: 58px;
+      line-height: .95;
+      margin-bottom: 34px;
     }
 
-    .ampersand{
-      font-family:"Cormorant Garamond",serif;
-
-      font-size:34px;
-
-      vertical-align:middle;
-
-      margin:0 8px;
+    .ampersand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      vertical-align: middle;
+      margin: 0 8px;
     }
 
 
@@ -237,40 +154,37 @@
        ENVELOPE
     ===================================================== */
 
-    .envelope-wrap{
-      width:300px;
-      height:205px;
+    .envelope-wrap {
+      width: 300px;
+      height: 205px;
+      margin: 0 auto 28px;
 
-      margin:0 auto 28px;
+      perspective: 1000px;
 
-      perspective:1000px;
-
-      cursor:pointer;
-
-      position:relative;
+      cursor: pointer;
+      position: relative;
     }
 
-    .envelope{
-      position:absolute;
+    .envelope {
+      position: absolute;
 
-      inset:20px 0 0;
+      inset: 20px 0 0;
 
-      background:#eee8e7;
+      background: #eee8e7;
 
-      border-radius:3px;
+      border-radius: 3px;
 
       box-shadow:
         0 18px 35px rgba(0,0,0,.35);
 
-      overflow:visible;
+      overflow: visible;
     }
 
-    .envelope::before{
-      content:"";
+    .envelope::before {
+      content: "";
 
-      position:absolute;
-
-      inset:0;
+      position: absolute;
+      inset: 0;
 
       background:
         linear-gradient(
@@ -280,15 +194,14 @@
           transparent 50.5%
         );
 
-      opacity:.7;
+      opacity: .7;
     }
 
-    .envelope::after{
-      content:"";
+    .envelope::after {
+      content: "";
 
-      position:absolute;
-
-      inset:0;
+      position: absolute;
+      inset: 0;
 
       background:
         linear-gradient(
@@ -298,25 +211,25 @@
           transparent 50.5%
         );
 
-      opacity:.55;
+      opacity: .55;
     }
 
-    .flap{
-      position:absolute;
+    .flap {
+      position: absolute;
 
-      z-index:4;
+      z-index: 4;
 
-      top:0;
-      left:0;
+      top: 0;
+      left: 0;
 
-      width:0;
-      height:0;
+      width: 0;
+      height: 0;
 
-      border-left:150px solid transparent;
-      border-right:150px solid transparent;
-      border-top:115px solid #faf7f5;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-top: 115px solid #faf7f5;
 
-      transform-origin:50% 0;
+      transform-origin: 50% 0;
 
       transition:
         transform 1s cubic-bezier(.2,.8,.2,1),
@@ -328,56 +241,51 @@
         );
     }
 
-    .seal{
-      position:absolute;
+    .seal {
+      position: absolute;
 
-      z-index:6;
+      z-index: 6;
 
-      left:50%;
-      top:96px;
+      left: 50%;
+      top: 96px;
 
-      transform:translateX(-50%);
+      transform: translateX(-50%);
 
-      width:54px;
-      height:54px;
+      width: 54px;
+      height: 54px;
 
-      border-radius:50%;
+      border-radius: 50%;
 
-      background:#eee5e1;
+      background: #eee5e1;
+      color: var(--wine);
 
-      color:var(--wine);
+      display: grid;
+      place-items: center;
 
-      display:grid;
-      place-items:center;
+      font-family: "Cormorant Garamond", serif;
 
-      font-family:"Cormorant Garamond",serif;
-
-      font-size:22px;
+      font-size: 22px;
 
       box-shadow:
         0 3px 9px rgba(0,0,0,.18);
 
-      transition:opacity .4s ease;
+      transition: opacity .4s ease;
     }
 
-    .envelope.open .flap{
-      transform:rotateX(180deg);
-
-      z-index:1;
+    .envelope.open .flap {
+      transform: rotateX(180deg);
+      z-index: 1;
     }
 
-    .envelope.open .seal{
-      opacity:0;
+    .envelope.open .seal {
+      opacity: 0;
     }
 
-    .click-text{
-      font-size:12px;
-
-      letter-spacing:2px;
-
-      font-weight:500;
-
-      opacity:.9;
+    .click-text {
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 500;
+      opacity: .9;
     }
 
 
@@ -385,159 +293,144 @@
        MAIN
     ===================================================== */
 
-    main{
-      display:none;
+    main {
+      display: none;
     }
 
-    main.visible{
-      display:block;
+    main.visible {
+      display: block;
     }
 
-    section{
-      position:relative;
+    section {
+      position: relative;
 
-      min-height:100vh;
+      min-height: 100vh;
 
-      padding:76px 28px;
+      padding: 76px 28px;
 
-      display:flex;
+      display: flex;
+      flex-direction: column;
 
-      flex-direction:column;
+      justify-content: center;
+      align-items: center;
 
-      justify-content:center;
-
-      align-items:center;
-
-      text-align:center;
-    }
-
-
-    /* =====================================================
-       DECORATIVE ACCESSORIES
-    ===================================================== */
-
-    .decorated{
-      overflow:hidden;
-    }
-
-    .ornament,
-    .floral-corner{
-      position:absolute !important;
-
-      z-index:1 !important;
-
-      pointer-events:none;
-
-      font-family:"Cormorant Garamond",serif;
-
-      line-height:1;
-    }
-
-    .ornament{
-      font-size:105px;
-
-      opacity:.16;
-
-      color:#eadbd2;
-    }
-
-    .ornament-top{
-      top:8px;
-      right:-6px;
-
-      transform:rotate(12deg);
-    }
-
-    .ornament-bottom{
-      bottom:-20px;
-      left:-6px;
-
-      transform:rotate(192deg);
-    }
-
-    .floral-corner{
-      font-size:105px;
-
-      opacity:.13;
-
-      color:#eadbd2;
-    }
-
-    .corner-tl{
-      top:-18px;
-      left:-18px;
-
-      transform:rotate(-20deg);
-    }
-
-    .corner-br{
-      bottom:-18px;
-      right:-18px;
-
-      transform:rotate(160deg);
-    }
-
-    .details .floral-corner,
-    .gallery .floral-corner,
-    .gift .floral-corner{
-      color:#6b4250;
-
-      opacity:.12;
+      text-align: center;
     }
 
 
     /* =====================================================
-       DECORATIVE DIVIDER
+       ORNAMENT
     ===================================================== */
 
-    .lace-divider{
-      width:150px;
+    .ornament {
+      position: absolute;
 
-      height:18px;
+      z-index: 1;
 
-      margin:-12px auto 24px;
+      pointer-events: none;
 
-      position:relative;
+      font-family: "Cormorant Garamond", serif;
 
-      opacity:.65;
+      font-size: 105px;
+
+      line-height: 1;
+
+      opacity: .15;
+
+      color: #eadbd2;
     }
 
-    .lace-divider::before,
-    .lace-divider::after{
-      content:"";
-
-      position:absolute;
-
-      top:8px;
-
-      width:55px;
-
-      height:1px;
-
-      background:currentColor;
-
-      opacity:.55;
+    .ornament-top {
+      top: 5px;
+      right: -5px;
+      transform: rotate(12deg);
     }
 
-    .lace-divider::before{
-      left:0;
+    .ornament-bottom {
+      bottom: -20px;
+      left: -8px;
+      transform: rotate(192deg);
     }
 
-    .lace-divider::after{
-      right:0;
+    .floral {
+      position: absolute;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      font-size: 100px;
+
+      line-height: 1;
+
+      opacity: .13;
+
+      color: #eadbd2;
     }
 
-    .lace-divider span{
-      position:absolute;
+    .floral-tl {
+      top: -15px;
+      left: -18px;
+      transform: rotate(-20deg);
+    }
 
-      left:50%;
-      top:-2px;
+    .floral-br {
+      right: -18px;
+      bottom: -15px;
+      transform: rotate(160deg);
+    }
 
-      transform:translateX(-50%);
 
-      font-family:"Cormorant Garamond",serif;
+    /* =====================================================
+       DIVIDER
+    ===================================================== */
 
-      font-size:20px;
+    .divider {
+      width: 150px;
+      height: 20px;
+
+      position: relative;
+
+      margin: -10px auto 28px;
+
+      opacity: .65;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+
+      position: absolute;
+
+      top: 9px;
+
+      width: 55px;
+      height: 1px;
+
+      background: currentColor;
+
+      opacity: .55;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .divider span {
+      position: absolute;
+
+      left: 50%;
+      top: -3px;
+
+      transform: translateX(-50%);
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 21px;
     }
 
 
@@ -545,8 +438,8 @@
        HERO
     ===================================================== */
 
-    .hero{
-      min-height:100svh;
+    .hero {
+      min-height: 100svh;
 
       background:
         radial-gradient(
@@ -568,68 +461,69 @@
         );
     }
 
-    .hero-frame{
-      width:88%;
+    .hero-frame {
+      width: 88%;
+      max-width: 380px;
 
-      max-width:380px;
-
-      border:1px solid
+      border:
+        1px solid
         rgba(231,218,207,.35);
 
-      padding:58px 24px 52px;
+      padding: 58px 24px 52px;
 
-      position:relative;
+      position: relative;
     }
 
-    .hero-frame::before{
-      content:"";
+    .hero-frame::before {
+      content: "";
 
-      position:absolute;
+      position: absolute;
 
-      inset:12px;
+      inset: 12px;
 
-      border:1px solid
+      border:
+        1px solid
         rgba(231,218,207,.14);
 
-      pointer-events:none;
+      pointer-events: none;
     }
 
-    .hero-title{
-      font-family:"Great Vibes",cursive;
+    .subtitle {
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:68px;
+      letter-spacing: 2px;
 
-      line-height:.9;
+      font-size: 14px;
 
-      margin:18px 0 24px;
+      text-transform: uppercase;
     }
 
-    .date{
-      font-family:"Cormorant Garamond",serif;
+    .hero-title {
+      font-family: "Great Vibes", cursive;
 
-      font-size:20px;
+      font-size: 68px;
 
-      letter-spacing:3px;
+      line-height: .9;
+
+      margin: 18px 0 24px;
     }
 
-    .subtitle{
-      font-family:"Cormorant Garamond",serif;
+    .date {
+      font-family: "Cormorant Garamond", serif;
 
-      letter-spacing:2px;
+      font-size: 20px;
 
-      font-size:14px;
-
-      text-transform:uppercase;
+      letter-spacing: 3px;
     }
 
-    .scroll-note{
-      margin-top:55px;
+    .scroll-note {
+      margin-top: 55px;
 
-      font-size:11px;
+      font-size: 11px;
 
-      letter-spacing:2px;
+      letter-spacing: 2px;
 
-      opacity:.7;
+      opacity: .7;
     }
 
 
@@ -637,37 +531,18 @@
        SAVE THE DATE
     ===================================================== */
 
-    .save{
+    .save {
       background:
         linear-gradient(
-          rgba(43,17,27,.76),
-          rgba(43,17,27,.92)
+          rgba(43,17,27,.78),
+          rgba(43,17,27,.94)
         ),
-
-        radial-gradient(
-          ellipse at 25% 30%,
-          #87736c 0 5%,
-          transparent 6%
-        ),
-
-        radial-gradient(
-          ellipse at 70% 30%,
-          #8d7770 0 5%,
-          transparent 6%
-        ),
-
-        radial-gradient(
-          ellipse at 45% 70%,
-          #76635e 0 6%,
-          transparent 7%
-        ),
-
         var(--wine);
     }
 
-    .lace{
-      width:260px;
-      height:230px;
+    .lace {
+      width: 260px;
+      height: 230px;
 
       border:
         10px double
@@ -677,69 +552,69 @@
         2px dashed
         rgba(245,238,233,.4);
 
-      outline-offset:-18px;
+      outline-offset: -18px;
 
       border-radius:
         38% 42% 36% 44%;
 
-      display:flex;
+      display: flex;
 
-      align-items:center;
-      justify-content:center;
+      align-items: center;
+      justify-content: center;
 
-      margin-bottom:32px;
+      margin-bottom: 32px;
 
-      transform:rotate(-3deg);
+      transform: rotate(-3deg);
 
       box-shadow:
         0 0 0 8px
         rgba(255,255,255,.025);
     }
 
-    .lace-content{
-      transform:rotate(3deg);
+    .lace-content {
+      transform: rotate(3deg);
     }
 
-    .save-title{
-      font-family:"Great Vibes",cursive;
+    .save-title {
+      font-family: "Great Vibes", cursive;
 
-      font-size:57px;
+      font-size: 57px;
 
-      line-height:.9;
+      line-height: .9;
     }
 
-    .save .date{
-      margin-top:22px;
+    .save .date {
+      margin-top: 22px;
 
-      font-size:17px;
+      font-size: 17px;
     }
 
-    .getting{
-      margin:42px 0 14px;
+    .getting {
+      margin: 42px 0 14px;
 
-      font-family:"Cormorant Garamond",serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:15px;
+      font-size: 15px;
 
-      letter-spacing:2px;
+      letter-spacing: 2px;
     }
 
-    .couple{
-      font-family:"Great Vibes",cursive;
+    .couple {
+      font-family: "Great Vibes", cursive;
 
-      font-size:55px;
+      font-size: 55px;
     }
 
-    .description{
-      max-width:330px;
+    .description {
+      max-width: 330px;
 
-      line-height:1.8;
+      line-height: 1.8;
 
-      font-size:13px;
+      font-size: 13px;
 
-      opacity:.85;
+      opacity: .85;
 
-      margin:16px auto 24px;
+      margin: 16px auto 24px;
     }
 
 
@@ -747,32 +622,32 @@
        BUTTON
     ===================================================== */
 
-    .btn{
-      border:0;
+    .btn {
+      border: 0;
 
-      background:var(--cream);
+      background: var(--cream);
 
-      color:#26131b;
+      color: #26131b;
 
-      padding:15px 28px;
+      padding: 15px 28px;
 
-      min-width:210px;
+      min-width: 210px;
 
-      letter-spacing:2px;
+      letter-spacing: 2px;
 
-      font-size:12px;
+      font-size: 12px;
 
-      font-weight:500;
+      font-weight: 500;
 
-      cursor:pointer;
+      cursor: pointer;
 
       transition:
         transform .25s ease,
         box-shadow .25s ease;
     }
 
-    .btn:hover{
-      transform:translateY(-2px);
+    .btn:hover {
+      transform: translateY(-2px);
 
       box-shadow:
         0 10px 25px
@@ -784,7 +659,7 @@
        COUNTDOWN
     ===================================================== */
 
-    .countdown{
+    .countdown {
       background:
         linear-gradient(
           160deg,
@@ -792,50 +667,79 @@
           #2b111b
         );
 
-      min-height:70vh;
+      min-height: 70vh;
     }
 
-    .count-title{
-      font-family:"Great Vibes",cursive;
+    .count-title {
+      font-family: "Great Vibes", cursive;
 
-      font-size:38px;
+      font-size: 38px;
 
-      margin-bottom:28px;
+      margin-bottom: 28px;
     }
 
-    .timer{
-      display:grid;
+    .timer {
+      display: grid;
 
       grid-template-columns:
         repeat(4,1fr);
 
-      gap:8px;
+      gap: 8px;
 
-      width:100%;
+      width: 100%;
 
-      max-width:420px;
+      max-width: 420px;
     }
 
-    .time-box strong{
-      display:block;
+    .time-box strong {
+      display: block;
 
-      font-family:"Cormorant Garamond",serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:38px;
+      font-size: 38px;
 
-      font-weight:500;
+      font-weight: 500;
     }
 
-    .time-box span{
-      display:block;
+    .time-box span {
+      display: block;
 
-      font-size:9px;
+      font-size: 9px;
 
-      letter-spacing:1.5px;
+      letter-spacing: 1.5px;
 
-      margin-top:2px;
+      margin-top: 2px;
 
-      opacity:.72;
+      opacity: .72;
+    }
+
+
+    /* =====================================================
+       SECTION TITLE
+    ===================================================== */
+
+    .section-kicker {
+      font-family: "Cormorant Garamond", serif;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      font-size: 12px;
+
+      margin-bottom: 12px;
+
+      opacity: .7;
+    }
+
+    .section-title {
+      font-family: "Great Vibes", cursive;
+
+      font-size: 56px;
+
+      font-weight: 400;
+
+      margin-bottom: 34px;
     }
 
 
@@ -843,76 +747,56 @@
        DETAILS
     ===================================================== */
 
-    .details{
-      background:#f3eeea;
+    .details {
+      background: #f3eeea;
 
-      color:#321722;
+      color: #321722;
     }
 
-    .section-kicker{
-      font-family:"Cormorant Garamond",serif;
-
-      letter-spacing:3px;
-
-      text-transform:uppercase;
-
-      font-size:12px;
-
-      margin-bottom:12px;
-
-      opacity:.7;
+    .details .floral {
+      color: #6b4250;
     }
 
-    .section-title{
-      font-family:"Great Vibes",cursive;
-
-      font-size:56px;
-
-      font-weight:400;
-
-      margin-bottom:34px;
-    }
-
-    .event{
-      width:100%;
+    .event {
+      width: 100%;
 
       border-top:
         1px solid
         rgba(50,23,34,.2);
 
-      padding:26px 10px;
+      padding: 26px 10px;
     }
 
-    .event:last-child{
+    .event:last-child {
       border-bottom:
         1px solid
         rgba(50,23,34,.2);
     }
 
-    .event h3{
-      font-family:"Cormorant Garamond",serif;
+    .event h3 {
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:27px;
+      font-size: 27px;
 
-      font-weight:500;
+      font-weight: 500;
 
-      margin-bottom:9px;
+      margin-bottom: 9px;
     }
 
-    .event .event-time{
-      font-size:13px;
+    .event-time {
+      font-size: 13px;
 
-      letter-spacing:1px;
+      letter-spacing: 1px;
 
-      margin-bottom:5px;
+      margin-bottom: 5px;
     }
 
-    .event p{
-      font-size:13px;
+    .event p {
+      font-size: 13px;
 
-      line-height:1.7;
+      line-height: 1.7;
 
-      opacity:.75;
+      opacity: .75;
     }
 
 
@@ -920,28 +804,28 @@
        STORY
     ===================================================== */
 
-    .story{
-      background:var(--wine);
+    .story {
+      background: var(--wine);
     }
 
-    .story-card{
-      max-width:380px;
+    .story-card {
+      max-width: 380px;
 
-      padding:38px 24px;
+      padding: 38px 24px;
 
       border:
         1px solid
         rgba(231,218,207,.2);
     }
 
-    .story-card p{
-      font-family:"Cormorant Garamond",serif;
+    .story-card p {
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:20px;
+      font-size: 20px;
 
-      line-height:1.7;
+      line-height: 1.7;
 
-      opacity:.9;
+      opacity: .9;
     }
 
 
@@ -949,25 +833,29 @@
        GALLERY
     ===================================================== */
 
-    .gallery{
-      background:#f3eeea;
+    .gallery {
+      background: #f3eeea;
 
-      color:#321722;
+      color: #321722;
     }
 
-    .gallery-grid{
-      width:100%;
+    .gallery .floral {
+      color: #6b4250;
+    }
 
-      display:grid;
+    .gallery-grid {
+      width: 100%;
+
+      display: grid;
 
       grid-template-columns:
         repeat(2,1fr);
 
-      gap:10px;
+      gap: 10px;
     }
 
-    .photo{
-      aspect-ratio:1;
+    .photo {
+      aspect-ratio: 1;
 
       background:
         linear-gradient(
@@ -976,18 +864,18 @@
           #77656a
         );
 
-      display:grid;
+      display: grid;
 
-      place-items:center;
+      place-items: center;
 
-      color:#fff;
+      color: #fff;
 
-      overflow:hidden;
+      overflow: hidden;
 
-      position:relative;
+      position: relative;
     }
 
-    .photo:nth-child(2){
+    .photo:nth-child(2) {
       background:
         linear-gradient(
           135deg,
@@ -996,7 +884,7 @@
         );
     }
 
-    .photo:nth-child(3){
+    .photo:nth-child(3) {
       background:
         linear-gradient(
           135deg,
@@ -1005,7 +893,7 @@
         );
     }
 
-    .photo:nth-child(4){
+    .photo:nth-child(4) {
       background:
         linear-gradient(
           135deg,
@@ -1014,20 +902,20 @@
         );
     }
 
-    .photo span{
-      font-family:"Great Vibes",cursive;
+    .photo span {
+      font-family: "Great Vibes", cursive;
 
-      font-size:27px;
+      font-size: 27px;
 
-      opacity:.9;
+      opacity: .9;
     }
 
 
     /* =====================================================
-       LOCATION / MAPS
+       LOCATION
     ===================================================== */
 
-    .location{
+    .location {
       background:
         linear-gradient(
           180deg,
@@ -1036,34 +924,41 @@
         );
     }
 
-    .map-box{
-      width:100%;
+    .map-card {
+      width: 100%;
+      max-width: 400px;
 
-      height:240px;
-
-      background:#ddd;
+      padding: 34px 20px;
 
       border:
         1px solid
-        rgba(255,255,255,.16);
+        rgba(255,255,255,.18);
 
-      display:flex;
-
-      align-items:center;
-      justify-content:center;
-
-      margin-bottom:25px;
-
-      overflow:hidden;
+      margin-bottom: 25px;
     }
 
-    .map-box iframe{
-      width:100%;
-      height:100%;
+    .map-icon {
+      font-size: 50px;
 
-      border:0;
+      margin-bottom: 15px;
+    }
 
-      display:block;
+    .map-title {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 29px;
+
+      margin-bottom: 8px;
+    }
+
+    .map-address {
+      font-size: 12px;
+
+      line-height: 1.8;
+
+      opacity: .7;
+
+      margin-bottom: 22px;
     }
 
 
@@ -1071,41 +966,41 @@
        RSVP
     ===================================================== */
 
-    .rsvp{
-      background:var(--wine);
+    .rsvp {
+      background: var(--wine);
     }
 
-    .rsvp-form{
-      width:100%;
+    .rsvp-form {
+      width: 100%;
 
-      max-width:370px;
+      max-width: 370px;
 
-      text-align:left;
+      text-align: left;
 
-      margin-top:5px;
+      margin-top: 5px;
     }
 
-    .form-group{
-      margin-bottom:16px;
+    .form-group {
+      margin-bottom: 17px;
     }
 
-    .form-group label{
-      display:block;
+    .form-group label {
+      display: block;
 
-      margin-bottom:7px;
+      margin-bottom: 7px;
 
-      font-size:11px;
+      font-size: 11px;
 
-      letter-spacing:1.5px;
+      letter-spacing: 1.5px;
 
-      text-transform:uppercase;
+      text-transform: uppercase;
 
-      opacity:.78;
+      opacity: .78;
     }
 
     .form-group input,
-    .form-group select{
-      width:100%;
+    .form-group select {
+      width: 100%;
 
       border:
         1px solid
@@ -1114,56 +1009,61 @@
       background:
         rgba(255,255,255,.07);
 
-      color:#fff;
+      color: #fff;
 
-      padding:14px 15px;
+      padding: 14px 15px;
 
-      outline:none;
+      outline: none;
 
-      border-radius:0;
+      border-radius: 0;
 
-      font-size:13px;
+      font-size: 13px;
 
-      font-family:"DM Sans",sans-serif;
+      font-family: "DM Sans", sans-serif;
     }
 
-    .form-group input::placeholder{
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: rgba(255,255,255,.6);
+    }
+
+    .form-group input::placeholder {
       color:
         rgba(255,255,255,.48);
     }
 
-    .form-group select option{
-      color:#321722;
+    .form-group select option {
+      color: #321722;
 
-      background:#f3eeea;
+      background: #f3eeea;
     }
 
-    .guest-help{
-      margin-top:6px;
+    .guest-help {
+      margin-top: 6px;
 
-      font-size:10px;
+      font-size: 10px;
 
-      line-height:1.5;
+      line-height: 1.5;
 
-      opacity:.55;
+      opacity: .55;
     }
 
-    .rsvp-form .btn{
-      width:100%;
+    .rsvp-form .btn {
+      width: 100%;
 
-      margin-top:4px;
+      margin-top: 4px;
     }
 
-    .rsvp-note{
-      margin-top:14px;
+    .rsvp-note {
+      margin-top: 14px;
 
-      font-size:10px;
+      font-size: 10px;
 
-      line-height:1.6;
+      line-height: 1.6;
 
-      text-align:center;
+      text-align: center;
 
-      opacity:.58;
+      opacity: .58;
     }
 
 
@@ -1171,64 +1071,68 @@
        DIGITAL GIFT
     ===================================================== */
 
-    .gift{
-      background:#f3eeea;
+    .gift {
+      background: #f3eeea;
 
-      color:#321722;
+      color: #321722;
     }
 
-    .bank{
-      width:100%;
+    .gift .floral {
+      color: #6b4250;
+    }
 
-      max-width:350px;
+    .bank {
+      width: 100%;
+
+      max-width: 350px;
 
       border:
         1px solid
         rgba(50,23,34,.2);
 
-      padding:30px 20px;
+      padding: 30px 20px;
 
-      margin-bottom:15px;
+      margin-bottom: 15px;
     }
 
-    .bank-name{
-      font-family:"Cormorant Garamond",serif;
+    .bank-name {
+      font-family: "Cormorant Garamond", serif;
 
-      font-size:28px;
+      font-size: 28px;
 
-      margin-bottom:8px;
+      margin-bottom: 8px;
     }
 
-    .account{
-      font-size:19px;
+    .account {
+      font-size: 19px;
 
-      letter-spacing:2px;
+      letter-spacing: 2px;
 
-      margin-bottom:5px;
+      margin-bottom: 5px;
     }
 
-    .holder{
-      font-size:12px;
+    .holder {
+      font-size: 12px;
 
-      opacity:.7;
+      opacity: .7;
 
-      margin-bottom:20px;
+      margin-bottom: 20px;
     }
 
-    .copy-btn{
-      background:#321722;
+    .copy-btn {
+      background: #321722;
 
-      color:#fff;
+      color: #fff;
 
-      border:0;
+      border: 0;
 
-      padding:11px 20px;
+      padding: 11px 20px;
 
-      font-size:11px;
+      font-size: 11px;
 
-      letter-spacing:1.5px;
+      letter-spacing: 1.5px;
 
-      cursor:pointer;
+      cursor: pointer;
     }
 
 
@@ -1236,31 +1140,31 @@
        FOOTER
     ===================================================== */
 
-    .footer{
-      padding:42px 25px 55px;
+    .footer {
+      padding: 42px 25px 55px;
 
-      text-align:center;
+      text-align: center;
 
-      background:#210e15;
+      background: #210e15;
 
       color:
         rgba(255,255,255,.7);
 
-      font-size:10px;
+      font-size: 10px;
 
-      line-height:1.8;
+      line-height: 1.8;
 
-      letter-spacing:.4px;
+      letter-spacing: .4px;
     }
 
-    .footer .footer-names{
-      font-family:"Great Vibes",cursive;
+    .footer-names {
+      font-family: "Great Vibes", cursive;
 
-      font-size:35px;
+      font-size: 35px;
 
-      color:var(--cream);
+      color: var(--cream);
 
-      margin-bottom:8px;
+      margin-bottom: 8px;
     }
 
 
@@ -1268,18 +1172,18 @@
        YOUTUBE PLAYER
     ===================================================== */
 
-    #player{
-      position:fixed;
+    #player {
+      position: fixed;
 
-      width:1px;
-      height:1px;
+      width: 1px;
+      height: 1px;
 
-      left:-10px;
-      bottom:-10px;
+      left: -10px;
+      bottom: -10px;
 
-      opacity:0;
+      opacity: 0;
 
-      pointer-events:none;
+      pointer-events: none;
     }
 
 
@@ -1287,50 +1191,52 @@
        MUSIC BUTTON
     ===================================================== */
 
-    .music-btn{
-      position:fixed;
+    .music-btn {
+      position: fixed;
 
-      z-index:90;
+      z-index: 90;
 
-      right:18px;
-      bottom:18px;
+      right: 18px;
+      bottom: 18px;
 
-      width:46px;
-      height:46px;
+      width: 46px;
+      height: 46px;
 
-      border-radius:50%;
+      border-radius: 50%;
 
       border:
         1px solid
         rgba(255,255,255,.3);
 
       background:
-        rgba(35,13,21,.85);
+        rgba(35,13,21,.88);
 
-      color:#fff;
+      color: #fff;
 
-      display:none;
+      display: none;
 
-      align-items:center;
-      justify-content:center;
+      align-items: center;
+      justify-content: center;
 
-      cursor:pointer;
+      cursor: pointer;
 
-      backdrop-filter:blur(8px);
+      backdrop-filter: blur(8px);
+
+      font-size: 20px;
     }
 
-    .music-btn.show{
-      display:flex;
+    .music-btn.show {
+      display: flex;
     }
 
-    .music-btn.playing{
+    .music-btn.playing {
       animation:
         spin 5s linear infinite;
     }
 
-    @keyframes spin{
-      to{
-        transform:rotate(360deg);
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
       }
     }
 
@@ -1339,36 +1245,36 @@
        TOAST
     ===================================================== */
 
-    .toast{
-      position:fixed;
+    .toast {
+      position: fixed;
 
-      left:50%;
-      bottom:78px;
+      left: 50%;
+      bottom: 78px;
 
       transform:
         translate(-50%,20px);
 
-      background:#f3eeea;
+      background: #f3eeea;
 
-      color:#321722;
+      color: #321722;
 
-      padding:10px 17px;
+      padding: 10px 17px;
 
-      font-size:12px;
+      font-size: 12px;
 
-      border-radius:20px;
+      border-radius: 20px;
 
-      opacity:0;
+      opacity: 0;
 
-      pointer-events:none;
+      pointer-events: none;
 
-      transition:.3s ease;
+      transition: .3s ease;
 
-      z-index:200;
+      z-index: 200;
     }
 
-    .toast.show{
-      opacity:1;
+    .toast.show {
+      opacity: 1;
 
       transform:
         translate(-50%,0);
@@ -1379,41 +1285,41 @@
        MOBILE
     ===================================================== */
 
-    @media(max-width:380px){
+    @media(max-width:380px) {
 
-      .intro-names{
-        font-size:50px;
+      .intro-names {
+        font-size: 50px;
       }
 
-      .envelope-wrap{
-        width:270px;
-        height:190px;
+      .envelope-wrap {
+        width: 270px;
+        height: 190px;
       }
 
-      .flap{
-        border-left-width:135px;
-        border-right-width:135px;
-        border-top-width:105px;
+      .flap {
+        border-left-width: 135px;
+        border-right-width: 135px;
+        border-top-width: 105px;
       }
 
-      .hero-title{
-        font-size:59px;
+      .hero-title {
+        font-size: 59px;
       }
 
-      .timer strong{
-        font-size:32px;
+      .timer strong {
+        font-size: 32px;
       }
 
-      .section-title{
-        font-size:50px;
+      .section-title {
+        font-size: 50px;
       }
 
-      .save-title{
-        font-size:50px;
+      .save-title {
+        font-size: 50px;
       }
 
-      .couple{
-        font-size:49px;
+      .couple {
+        font-size: 49px;
       }
     }
 
@@ -1427,7 +1333,7 @@
 
 
     <!-- =================================================
-         HALAMAN PEMBUKA / AMPLOP
+         OPENING / ENVELOPE
     ================================================= -->
 
     <div
@@ -1484,7 +1390,7 @@
 
 
     <!-- =================================================
-         ISI UNDANGAN
+         MAIN CONTENT
     ================================================= -->
 
     <main id="main">
@@ -1494,7 +1400,7 @@
            HERO
       ================================================= -->
 
-      <section class="hero decorated">
+      <section class="hero">
 
         <div class="ornament ornament-top">
           ❦
@@ -1536,13 +1442,13 @@
            SAVE THE DATE
       ================================================= -->
 
-      <section class="save decorated">
+      <section class="save">
 
-        <div class="floral-corner corner-tl">
+        <div class="floral floral-tl">
           ✿
         </div>
 
-        <div class="floral-corner corner-br">
+        <div class="floral floral-br">
           ❀
         </div>
 
@@ -1588,7 +1494,7 @@
           class="btn"
           onclick="scrollToSection('countdown')"
         >
-          SHARE YOUR DETAILS
+          OUR SPECIAL DAY
         </button>
 
       </section>
@@ -1599,7 +1505,10 @@
            COUNTDOWN
       ================================================= -->
 
-      <section class="countdown decorated" id="countdown">
+      <section
+        class="countdown"
+        id="countdown"
+      >
 
         <div class="ornament ornament-top">
           ❦
@@ -1679,13 +1588,13 @@
            DETAIL ACARA
       ================================================= -->
 
-      <section class="details decorated">
+      <section class="details">
 
-        <div class="floral-corner corner-tl">
+        <div class="floral floral-tl">
           ❀
         </div>
 
-        <div class="floral-corner corner-br">
+        <div class="floral floral-br">
           ✿
         </div>
 
@@ -1700,12 +1609,10 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
 
-
-        <!-- AKAD -->
 
         <div class="event">
 
@@ -1727,8 +1634,6 @@
 
         </div>
 
-
-        <!-- RESEPSI -->
 
         <div class="event">
 
@@ -1758,7 +1663,7 @@
            OUR STORY
       ================================================= -->
 
-      <section class="story decorated">
+      <section class="story">
 
         <div class="ornament ornament-top">
           ❦
@@ -1779,7 +1684,7 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
 
@@ -1808,13 +1713,13 @@
            GALLERY
       ================================================= -->
 
-      <section class="gallery decorated">
+      <section class="gallery">
 
-        <div class="floral-corner corner-tl">
+        <div class="floral floral-tl">
           ✿
         </div>
 
-        <div class="floral-corner corner-br">
+        <div class="floral floral-br">
           ❀
         </div>
 
@@ -1829,21 +1734,9 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
-
-
-        <!--
-          FOTO SEMENTARA
-
-          Nanti kalau foto sudah tersedia,
-          bagian ini bisa diganti menjadi:
-
-          <img src="foto1.jpg">
-          <img src="foto2.jpg">
-          dst.
-        -->
 
 
         <div class="gallery-grid">
@@ -1887,7 +1780,7 @@
            LOCATION
       ================================================= -->
 
-      <section class="location decorated">
+      <section class="location">
 
         <div class="ornament ornament-top">
           ❦
@@ -1908,35 +1801,38 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
 
 
-        <!-- GOOGLE MAP -->
+        <div class="map-card">
 
-        <div class="map-box">
+          <div class="map-icon">
+            ♧
+          </div>
 
-          <iframe
-            src="https://www.google.com/maps?q=-7.5379275,110.7599966&z=17&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Peta Ballroom Hotel Ramada">
-          </iframe>
+          <div class="map-title">
+            Ballroom Hotel Ramada
+          </div>
+
+          <div class="map-address">
+            Sabtu, 28 November 2026<br>
+            Akad 08.00 WIB<br>
+            Resepsi 10.00 WIB
+          </div>
+
+
+          <a
+            class="btn"
+            href="https://maps.app.goo.gl/GQjUG2MWhmbDxZCm6"
+            target="_blank"
+            rel="noopener"
+          >
+            OPEN GOOGLE MAPS
+          </a>
 
         </div>
-
-
-        <!-- OPEN GOOGLE MAPS -->
-
-        <a
-          class="btn"
-          href="https://maps.app.goo.gl/GQjUG2MWhmbDxZCm6"
-          target="_blank"
-          rel="noopener"
-        >
-          OPEN GOOGLE MAPS
-        </a>
 
       </section>
 
@@ -1946,13 +1842,13 @@
            RSVP
       ================================================= -->
 
-      <section class="rsvp decorated">
+      <section class="rsvp">
 
-        <div class="floral-corner corner-tl">
+        <div class="floral floral-tl">
           ❀
         </div>
 
-        <div class="floral-corner corner-br">
+        <div class="floral floral-br">
           ✿
         </div>
 
@@ -1967,19 +1863,19 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
 
 
         <p class="description">
 
-          Mohon isi nama dan jumlah tamu
-          yang hadir.
+          Mohon isi nama dan jumlah
+          tamu yang akan hadir.
 
-          Setelah menekan tombol konfirmasi,
+          Setelah menekan tombol,
           WhatsApp akan terbuka dengan
-          pesan yang sudah otomatis terisi.
+          pesan konfirmasi otomatis.
 
         </p>
 
@@ -2001,7 +1897,6 @@
             <input
               type="text"
               id="guestName"
-              name="guestName"
               placeholder="Masukkan nama Anda"
               autocomplete="name"
               required
@@ -2019,10 +1914,8 @@
               Jumlah yang hadir
             </label>
 
-
             <select
               id="guestCount"
-              name="guestCount"
               required
             >
 
@@ -2072,19 +1965,9 @@
 
             </select>
 
-
-            <div class="guest-help">
-
-              Pilih jumlah orang
-              yang akan hadir.
-
-            </div>
-
           </div>
 
 
-
-          <!-- BUTTON RSVP -->
 
           <button
             class="btn"
@@ -2096,9 +1979,8 @@
 
           <div class="rsvp-note">
 
-            Setelah diklik,
-            WhatsApp akan terbuka
-            dengan pesan konfirmasi otomatis.
+            Konfirmasi akan dikirim
+            melalui WhatsApp.
 
           </div>
 
@@ -2113,7 +1995,7 @@
            DIGITAL GIFT
       ================================================= -->
 
-      <section class="gift decorated">
+      <section class="gift">
 
         <div class="ornament ornament-top">
           ❦
@@ -2134,7 +2016,7 @@
         </div>
 
 
-        <div class="lace-divider">
+        <div class="divider">
           <span>❦</span>
         </div>
 
@@ -2200,11 +2082,9 @@
           Irine &amp; Afif
         </div>
 
-
         <div>
           28 • 11 • 2026
         </div>
-
 
         <div style="margin-top:12px">
           With love, Irine &amp; Afif
@@ -2220,7 +2100,7 @@
 
 
   <!-- =====================================================
-       YOUTUBE BACKSOUND
+       YOUTUBE PLAYER
   ===================================================== -->
 
   <div id="player"></div>
@@ -2250,18 +2130,22 @@
 
 
   <!-- =====================================================
-       YOUTUBE API
+       YOUTUBE IFRAME API
   ===================================================== -->
 
   <script src="https://www.youtube.com/iframe_api"></script>
 
 
-
   <script>
 
-
     /* =====================================================
-       YOUTUBE MUSIC
+       YOUTUBE BACKSOUND
+       
+       Link:
+       https://www.youtube.com/watch?v=cjnkwpoKoMg
+
+       Musik dimulai dari:
+       00:07
     ===================================================== */
 
     let player = null;
@@ -2270,55 +2154,45 @@
 
     let isPlaying = false;
 
+    const YOUTUBE_VIDEO_ID = "cjnkwpoKoMg";
 
-    /*
-      Video YouTube:
-
-      https://www.youtube.com/watch?v=cjnkwpoKoMg
-
-      ID:
-      cjnkwpoKoMg
-    */
-
-    const YOUTUBE_VIDEO_ID =
-      "cjnkwpoKoMg";
+    const MUSIC_START_TIME = 7;
 
 
-    function onYouTubeIframeAPIReady(){
+    /* =====================================================
+       YOUTUBE READY
+    ===================================================== */
+
+    function onYouTubeIframeAPIReady() {
 
       player = new YT.Player(
         "player",
         {
 
-          height:"1",
+          height: "1",
+          width: "1",
 
-          width:"1",
+          videoId: YOUTUBE_VIDEO_ID,
 
-          videoId:
-            YOUTUBE_VIDEO_ID,
+          playerVars: {
 
+            autoplay: 0,
 
-          playerVars:{
+            controls: 0,
 
-            autoplay:0,
+            playsinline: 1,
 
-            controls:0,
+            rel: 0,
 
-            loop:1,
+            loop: 1,
 
-            playlist:
-              YOUTUBE_VIDEO_ID,
-
-            playsinline:1,
-
-            rel:0
+            playlist: YOUTUBE_VIDEO_ID
 
           },
 
+          events: {
 
-          events:{
-
-            onReady:function(){
+            onReady: function() {
 
               musicReady = true;
 
@@ -2327,12 +2201,16 @@
             },
 
 
-            onStateChange:function(event){
+            onStateChange: function(event) {
 
-              if(
+              /* ===============================
+                 PLAYING
+              =============================== */
+
+              if (
                 event.data ===
                 YT.PlayerState.PLAYING
-              ){
+              ) {
 
                 isPlaying = true;
 
@@ -2344,13 +2222,37 @@
               }
 
 
-              if(
-                event.data ===
-                YT.PlayerState.PAUSED ||
+              /* ===============================
+                 ENDED
+                 
+                 Kembali ke detik 7
+              =============================== */
 
+              if (
                 event.data ===
                 YT.PlayerState.ENDED
-              ){
+              ) {
+
+                player.seekTo(
+                  MUSIC_START_TIME,
+                  true
+                );
+
+                player.playVideo();
+
+                isPlaying = true;
+
+              }
+
+
+              /* ===============================
+                 PAUSED
+              =============================== */
+
+              if (
+                event.data ===
+                YT.PlayerState.PAUSED
+              ) {
 
                 isPlaying = false;
 
@@ -2372,26 +2274,44 @@
 
 
 
-    function playWeddingMusic(){
+    /* =====================================================
+       START MUSIC
+       
+       Mulai dari detik ke-7
+    ===================================================== */
 
-      if(
+    function playWeddingMusic() {
+
+      if (
         !musicReady ||
         !player
-      ){
+      ) {
         return;
       }
 
-
-      try{
+      try {
 
         player.unMute();
 
         player.setVolume(70);
 
+        /*
+          Pindahkan posisi
+          ke detik 7
+        */
+
+        player.seekTo(
+          MUSIC_START_TIME,
+          true
+        );
+
+        /*
+          Kemudian mulai
+        */
+
         player.playVideo();
 
         isPlaying = true;
-
 
         document
           .getElementById("musicButton")
@@ -2400,7 +2320,7 @@
 
       }
 
-      catch(error){
+      catch(error) {
 
         console.log(
           "Musik belum dapat diputar:",
@@ -2413,27 +2333,37 @@
 
 
 
-    function toggleMusic(){
+    /* =====================================================
+       MUSIC TOGGLE
+    ===================================================== */
 
-      if(
+    function toggleMusic() {
+
+      if (
         !musicReady ||
         !player
-      ){
+      ) {
         return;
       }
 
 
-      if(isPlaying){
+      if (isPlaying) {
 
         player.pauseVideo();
 
       }
 
-      else{
+      else {
 
         player.unMute();
 
         player.setVolume(70);
+
+        /*
+          Kalau musik dinyalakan
+          lagi setelah pause,
+          lanjut dari posisi terakhir.
+        */
 
         player.playVideo();
 
@@ -2451,7 +2381,7 @@
       .getElementById("envelopeButton")
       .addEventListener(
         "click",
-        function(){
+        function() {
 
           const envelope =
             document.getElementById(
@@ -2475,7 +2405,7 @@
 
 
           /*
-            Buka amplop
+            Animasi buka amplop
           */
 
           envelope
@@ -2484,21 +2414,19 @@
 
 
           /*
-            Musik mulai
-            setelah user
-            klik amplop
+            Musik dimulai
+            dari detik ke-7
           */
 
           playWeddingMusic();
 
 
           /*
-            Tampilkan
-            isi undangan
+            Tampilkan undangan
           */
 
           setTimeout(
-            function(){
+            function() {
 
               main
                 .classList
@@ -2513,17 +2441,10 @@
                 .add("show");
 
 
-              setTimeout(
-                function(){
-
-                  window.scrollTo({
-                    top:0,
-                    behavior:"instant"
-                  });
-
-                },
-                50
-              );
+              window.scrollTo({
+                top: 0,
+                behavior: "instant"
+              });
 
             },
             850
@@ -2538,16 +2459,16 @@
        SCROLL
     ===================================================== */
 
-    function scrollToSection(id){
+    function scrollToSection(id) {
 
       const element =
         document.getElementById(id);
 
 
-      if(element){
+      if (element) {
 
         element.scrollIntoView({
-          behavior:"smooth"
+          behavior: "smooth"
         });
 
       }
@@ -2558,14 +2479,10 @@
 
     /* =====================================================
        COUNTDOWN
+       
+       28 November 2026
+       08.00 WIB
     ===================================================== */
-
-    /*
-      Acara:
-
-      28 November 2026
-      08.00 WIB
-    */
 
     const weddingDate =
       new Date(
@@ -2573,18 +2490,15 @@
       ).getTime();
 
 
+    function updateCountdown() {
 
-    function updateCountdown(){
-
-      const now =
-        Date.now();
-
+      const now = Date.now();
 
       const distance =
         weddingDate - now;
 
 
-      if(distance <= 0){
+      if (distance <= 0) {
 
         document
           .getElementById("days")
@@ -2645,28 +2559,28 @@
         .getElementById("days")
         .textContent =
           String(days)
-            .padStart(3,"0");
+            .padStart(3, "0");
 
 
       document
         .getElementById("hours")
         .textContent =
           String(hours)
-            .padStart(2,"0");
+            .padStart(2, "0");
 
 
       document
         .getElementById("minutes")
         .textContent =
           String(minutes)
-            .padStart(2,"0");
+            .padStart(2, "0");
 
 
       document
         .getElementById("seconds")
         .textContent =
           String(seconds)
-            .padStart(2,"0");
+            .padStart(2, "0");
 
     }
 
@@ -2689,36 +2603,28 @@
       .getElementById("rsvpForm")
       .addEventListener(
         "submit",
-        function(event){
+        function(event) {
 
           event.preventDefault();
 
 
           const name =
             document
-              .getElementById(
-                "guestName"
-              )
+              .getElementById("guestName")
               .value
               .trim();
 
 
           const guestCount =
             document
-              .getElementById(
-                "guestCount"
-              )
+              .getElementById("guestCount")
               .value;
 
 
-          /*
-            Validasi
-          */
-
-          if(
+          if (
             !name ||
             !guestCount
-          ){
+          ) {
 
             showToast(
               "Mohon lengkapi data RSVP"
@@ -2730,11 +2636,10 @@
 
 
           /*
-            Nomor WhatsApp:
-
+            Nomor asli:
             081215575295
 
-            Format internasional:
+            Format WhatsApp:
             6281215575295
           */
 
@@ -2747,18 +2652,18 @@
           */
 
           const message =
-            "Halo Irine & Afif,%0A%0A" +
+            "Halo Irine & Afif,\n\n" +
 
             "Saya ingin mengonfirmasi " +
-            "kehadiran:%0A" +
+            "kehadiran:\n\n" +
 
             "Nama: " +
-            encodeURIComponent(name) +
-            "%0A" +
+            name +
+            "\n" +
 
             "Jumlah hadir: " +
-            encodeURIComponent(guestCount) +
-            "%0A%0A" +
+            guestCount +
+            "\n\n" +
 
             "Terima kasih.";
 
@@ -2767,7 +2672,9 @@
             "https://wa.me/" +
             whatsappNumber +
             "?text=" +
-            message;
+            encodeURIComponent(
+              message
+            );
 
 
           /*
@@ -2786,10 +2693,10 @@
 
 
     /* =====================================================
-       COPY NOMOR REKENING
+       COPY REKENING
     ===================================================== */
 
-    function copyAccount(){
+    function copyAccount() {
 
       const number =
         document
@@ -2800,20 +2707,16 @@
           .trim();
 
 
-      /*
-        Cara modern
-      */
-
-      if(
+      if (
         navigator.clipboard &&
         navigator.clipboard.writeText
-      ){
+      ) {
 
         navigator.clipboard
           .writeText(number)
 
           .then(
-            function(){
+            function() {
 
               showToast(
                 "Nomor rekening disalin"
@@ -2823,7 +2726,7 @@
           )
 
           .catch(
-            function(){
+            function() {
 
               fallbackCopy(number);
 
@@ -2832,7 +2735,7 @@
 
       }
 
-      else{
+      else {
 
         fallbackCopy(number);
 
@@ -2846,7 +2749,7 @@
        FALLBACK COPY
     ===================================================== */
 
-    function fallbackCopy(number){
+    function fallbackCopy(number) {
 
       const textarea =
         document.createElement(
@@ -2854,8 +2757,7 @@
         );
 
 
-      textarea.value =
-        number;
+      textarea.value = number;
 
 
       document.body
@@ -2885,7 +2787,7 @@
        TOAST
     ===================================================== */
 
-    function showToast(message){
+    function showToast(message) {
 
       const toast =
         document.getElementById(
@@ -2902,7 +2804,7 @@
 
 
       setTimeout(
-        function(){
+        function() {
 
           toast.classList
             .remove("show");
@@ -2912,7 +2814,6 @@
       );
 
     }
-
 
   </script>
 
